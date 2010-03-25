@@ -1,0 +1,21 @@
+K 15
+svn:realmstring
+V 28
+svn+ssh://svn.visfleet.local
+K 4
+port
+V 2
+22
+K 8
+username
+V 12
+marcus.wyatt
+K 8
+passtype
+V 6
+simple
+K 3
+key
+V 25
+/Users/Marcus/.ssh/id_rsa
+END

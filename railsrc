@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+# def method_missing(method, *args, &block)
+#   User.find_by_login(method.to_s) || super
+# end
+# begin
+#   require File.join("#{ENV['HOME']}", '.irb', 'rails')
+# rescue LoadError
+# end
+
+# The following will make standard rails debug logging (SQL statements etc)
+# shine through on your output from script/console
+def script_console_running?
+  ENV.include?('RAILS_ENV') &&
+  IRB.conf[:LOAD_MODULES] &&
+  IRB.conf[:LOAD_MODULES].include?('console_with_helpers')
+end
+
+if script_console_running?
+  require 'logger'
+  Object.const_set(:RAILS_DEFAULT_LOGGER, Logger.new(STDOUT))
+end
+
+def sql(query)
+  ActiveRecord::Base.connection.select_all(query)
+end

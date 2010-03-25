@@ -1,0 +1,1 @@
+/Volumes/Data/Marcus/Personal/dotfiles/zsh/zshenv.zsh

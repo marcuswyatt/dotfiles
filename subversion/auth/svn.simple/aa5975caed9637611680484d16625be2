@@ -1,0 +1,17 @@
+K 8
+passtype
+V 6
+simple
+K 8
+password
+V 8
+v1sphone
+K 15
+svn:realmstring
+V 60
+<https://dev.cactuslab.com:443> Shared Subversion Repository
+K 8
+username
+V 8
+visfleet
+END

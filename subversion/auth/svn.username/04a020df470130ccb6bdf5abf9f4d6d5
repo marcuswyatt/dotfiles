@@ -1,0 +1,13 @@
+K 15
+svn:realmstring
+V 28
+svn+ssh://svn.visfleet.local
+K 8
+username
+V 12
+Marcus Wyatt
+K 8
+passtype
+V 6
+simple
+END

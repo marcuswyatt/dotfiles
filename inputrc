@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set meta-flag on
+set input-meta on
+set output-meta on
+# set convert-meta off
+# set editing-mode vi
+# set keymap vi
+
+# Shows all files instead of beep when tab-completing
+set show-all-if-ambiguous on
+# Ignore case when completing, very nice!
+set completion-ignore-case on
