@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# Have rvm install rubies when used instead of simply displaying a warning and exiting.
+rvm_install_on_use_flag=1
+
+# Have rvm compile using say, 3, compile threads.
+# rvm_make_flags="-j 3"
+
+# Have rvm install to a different location (notice that it ends with /rvm).
+# rvm_path=/opt/rvm
+
+# Have rvm compile rubies and libraries as x86_64 on *Mac OS X*.
+rvm_archflags="-arch x86_64"
+
+# To turn off the project specific rvmrc functionality in your $HOME/.rvmrc set 0
+rvm_project_rvmrc=1
+
+# Enable switching to default / system when leaving a directory set
+rvm_project_rvmrc_default=1
+

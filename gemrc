@@ -3,7 +3,6 @@
 :benchmark: false
 :verbose: true
 :update_sources: true
-:gemcutter_key: 238eb298101740bb75db3d9a825e0e33
 :sources:
 - http://rubygems.org
 - http://gems.github.com
