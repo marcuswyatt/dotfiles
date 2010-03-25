@@ -1,8 +1,0 @@
-zsh/private/*
-ssh/*
-private/*
-.gitconfig
-.zlogin
-.zprofile
-.zshenv
-.zshrc
