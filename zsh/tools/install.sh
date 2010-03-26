@@ -6,11 +6,19 @@ then
   rm ~/.zshrc;
 fi
 
-echo "Using the Zsh template file and adding it to ~/.zshrc"
-cp ../templates/zshrc.zsh-template ~/.zshrc
-
 echo "Copying your current PATH and adding it to the ./private/paths.zsh file"
-echo "export PATH=$PATH" >> ./private/paths.zsh
+if [[ -e ./private/paths.zsh  ]]; then
+  touch ./private/paths.zsh
+  echo "export PATH=$PATH" >> ./private/paths.zsh
+fi
+
+# Path to your zsh configuration.
+ZSH=/Volumes/Data/Marcus/Personal/dotfiles/zsh
+
+echo "Create symlink for all the z files (zlogin, zlogout, zprofile, zshenv, zshrc)"
+for zfile in $ZSH/*.zsh; do
+  ln -sF $zfile $HOME/.`basename $zfile .zsh`
+done
 
 echo "Time to change your default shell to zsh!"
 chsh -s /bin/zsh
@@ -18,6 +26,3 @@ chsh -s /bin/zsh
 echo "Hooray! Zsh has been installed."
 /bin/zsh
 source ~/.zshrc
-
-
-# TODO: intall the login, profile, env as well

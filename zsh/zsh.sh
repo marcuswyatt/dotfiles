@@ -3,6 +3,9 @@
 # Add a function path
 fpath=($ZSH/functions $fpath)
 
+# Load all the shared config files
+for shared_file ($ZSH/../shell/lib/*.sh) source $shared_file
+
 # Load all the base lib config files
 for config_file ($ZSH/lib/*.zsh) source $config_file
 

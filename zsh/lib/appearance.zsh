@@ -25,10 +25,10 @@ fi
 PS1="%n@%m:%~%# "
 
 # git theming default: Variables for theming the git info prompt
-ZSH_THEME_GIT_PROMPT_PREFIX="git:("         # Prefix at the very beginning of the prompt, before the branch name
-ZSH_THEME_GIT_PROMPT_SUFFIX=")"             # At the very end of the prompt
-ZSH_THEME_GIT_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
-ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
+THEME_PROMPT_PREFIX="("             # Prefix at the very beginning of the prompt, before the branch name
+THEME_PROMPT_SUFFIX=")"             # At the very end of the prompt
+THEME_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
+THEME_PROMPT_CLEAN=""               # Text to display if the branch is clean
 
 # Setup the prompt with pretty colors
 setopt prompt_subst
@@ -37,4 +37,4 @@ setopt prompt_subst
 # autoload -U promptinit && promptinit
 
 # Load the theme
-source "$ZSH/themes/$ZSH_THEME.zsh"
+source "$ZSH/themes/$THEME.zsh"
