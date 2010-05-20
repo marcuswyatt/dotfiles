@@ -1,18 +1,18 @@
-bindkey -v
-
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
+# bindkey -v
+# 
+# function zle-line-init zle-keymap-select {
+#     RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+#     RPS2=$RPS1
+#     zle reset-prompt
+# }
+# zle -N zle-line-init
+# zle -N zle-keymap-select
 
 # TODO: Explain what some of this does..
 # autoload -U compinit
 # compinit
 #
-# bindkey -e
+bindkey -e
 # bindkey '\ew' kill-region
 # bindkey -s '\el' "ls\n"
 # bindkey -s '\e.' "..\n"

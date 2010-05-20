@@ -17,4 +17,4 @@ export THEME="marcus-wyatt"
 
 source $ZSH/zsh.sh
 
-rvm default
+rvm 1.8.7

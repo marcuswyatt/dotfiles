@@ -64,7 +64,14 @@
   default = tracking
 [mirror]
   summary = true
-[branch]
+[branch]  
+  autosetuprebase = always
   autosetupmerge = true
 [help]
   autocorrect = 1
+[user]
+	name = Marcus Wyatt
+	email = marcus.wyatt@visfleet.com
+[github]
+	user = marcus-wyatt
+	token = b0804a78cc7a12692a1c41818b6bbbb7

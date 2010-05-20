@@ -21,3 +21,5 @@ export SVN_EDITOR='vim'
 export GIT_EDITOR='vim'
 export GEM_OPEN_EDITOR='vim'
 # export LESSEDIT='mate -l %lm %f'
+
+export QTDIR=/opt/local/lib/qt3

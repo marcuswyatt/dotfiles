@@ -1,12 +1,13 @@
-rails_version=`rails -v | grep -m 1 'Rails' | sed 's/^.*Rails[ ]*//' | sed 's/["]//g' `
+rails_version=`rails -v`
 
 alias tl='tail -f tail -f log/development.log /var/log/apache2/*_log'
 
-if [[ $rails_version == 2.* ]] ; then
+if [[ $rails_version =~ .*2\.*  ]]; then
+
   ###############
   # RAILS 2.x.x #
   ###############
-
+  
   # thin server
   alias ts='thin start'
   alias ss='thin --stats "/thin/stats" start'
@@ -18,16 +19,19 @@ if [[ $rails_version == 2.* ]] ; then
   # passenger
   alias rp='touch tmp/restart.txt'
 
-  alias sc='ruby script/console --irb="irb --simple-prompt -r irb/completion -rubygems"'
-  alias sd='ruby script/dbconsole'
-  alias sg='ruby script/generate'
-  alias sp='ruby script/plugin'
-  alias ss='ruby script/server'
-  alias ssr='ruby script/server_restart'
-  alias ssd='ruby script/server --debugger'
-  alias ssp='ruby script/spec'
-
-elif [[ $rails_version == 3.* ]]; then
+  alias rg='ruby script/generate'
+  alias rc='ruby script/console --irb="irb --simple-prompt -r irb/completion -rubygems"'
+  alias rs='ruby script/server'
+  alias rsd='ruby script/server --debugger'
+  alias rsr='ruby script/restarter'
+  alias rdb='ruby script/dbconsole'
+  alias rbench='ruby script/performance/benchmarker'
+  alias rprof='ruby script/performance/profiler'
+  alias rp='ruby script/plugin'
+  alias rr='ruby script/runner'
+  alias rspec='ruby script/spec'
+  
+elif [[ $rails_version =~ .*3\.* ]]; then
 
   ###########
   # RAILS 3 #
