@@ -10,8 +10,8 @@ export ARCHFLAGS="-arch x86_64"     # So we don't have to specify in Snow Leopar
 
 export CDPATH=:$HOME                # add HOME to CDPATH string
 
-export AUTOFEATURE=true             # Set so that autospec will run cucumber stories
-export RSPEC=true
+# export AUTOFEATURE=false             # Set so that autospec will run cucumber stories
+# export RSPEC=true
 
 export USE_PGXS=1                   # PostgreSQL pgTAP
 export PGOPTIONS='-c client_min_messages=WARNING' # Turn off PostgreSQL messages

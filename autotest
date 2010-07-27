@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'autotest/fsevent'
+require 'autotest/growl'
+
+Autotest::Growl::image_dir = 'ampelmaennchen'
+Autotest::Growl::clear_terminal = false
+Autotest::Growl::hide_label = true
+Autotest::Growl::one_notification_per_run = true
+# Autotest::Growl::sticky_failure_notifications = true
+Autotest::Growl::show_modified_files = true
+Autotest::Growl::remote_notification = true

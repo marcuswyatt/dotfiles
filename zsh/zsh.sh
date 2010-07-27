@@ -4,13 +4,13 @@
 fpath=($ZSH/functions $fpath)
 
 # Load all the shared config files
-for shared_file ($ZSH/../shell/lib/*.sh) source $shared_file
+for shared_file ($ZSH/../shell/**/*.sh) source $shared_file
 
 # Load all the base lib config files
-for config_file ($ZSH/lib/*.zsh) source $config_file
+for lib_file ($ZSH/lib/*.zsh) source $lib_file
 
 # Load all of your custom configurations from custom/
-for config_file ($ZSH/custom/*.zsh) source $config_file
+for custom_file ($ZSH/custom/*.zsh) source $custom_file
 
 # Load all of your private configurations from private/
-for config_file ($ZSH/private/*.zsh) source $config_file
+for private_file ($ZSH/private/*.zsh) source $private_file
